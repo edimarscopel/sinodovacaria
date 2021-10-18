@@ -49,7 +49,7 @@ var listaEventos = {
     },
     {
       "titulo": "Abertura do Sínodo na forania de São José do Ouro",
-      "data": "2020,01,01",
+      "data": "2023,01,01",
       "hora": "0h05min",
       "local": "Algum lugar",
       "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate optio molestiae qui totam soluta, corporis architecto aliquid facere, tempora est, debitis doloremque perferendis sed. Quia quas voluptate explicabo tempora?",
@@ -57,7 +57,7 @@ var listaEventos = {
     },
     {
       "titulo": "Abertura do Sínodo",
-      "data": "2020,01,01",
+      "data": "2022,01,01",
       "hora": "0h05min",
       "local": "Algum lugar",
       "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate optio molestiae qui totam soluta, corporis architecto aliquid facere, tempora est, debitis doloremque perferendis sed. Quia quas voluptate explicabo tempora?",
