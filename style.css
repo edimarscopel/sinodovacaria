@@ -1,0 +1,919 @@
+/* RESET CSS
+    based on
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+svg {
+    z-index: 1;
+}
+
+/* ROOT */
+
+:root{
+    --green-principal: #B4CAAD;
+    --green-contraste: #424A40;
+    --green-hover: #dee7db;
+    --white_sinodo: #F7FFF5;
+    --black_sinodo: #1B1C1B;
+}
+
+/* GENERAL STYLE */
+body {
+    background-color: var(--white_sinodo);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    max-width: 100vw;
+}
+
+h2{
+    font-weight: 700;
+    text-align: center;
+    color: var(--green-contraste);
+    font-size: 2.5rem;
+    padding: 1.5rem;
+}
+
+h3{
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.colunas {
+    display: flex;
+    margin: auto;
+    width: 70vw;
+    max-width: 1920px;
+    justify-content: center;
+}
+
+.colunas div{
+    margin: 1.5rem;
+}
+
+@media (max-width: 900px)
+{
+   .colunas{
+        width: 90vw;
+    }
+}
+
+@media (max-width: 600px)
+{
+   .colunas{
+        flex-direction: column;
+    }
+}
+
+/* TOP BAR STYLE */
+
+
+#top-bar{
+    background-color: var(--green-contraste);
+    width: 100%;
+    height: 70px;
+    display: flex;
+
+    position: fixed;
+    z-index: 100;
+    border-bottom: 5px solid var(--white_sinodo);
+}
+
+#menu_principal{
+    margin: auto;
+    max-width: 1920px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu-itens{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo-diocese{
+    height: 60px;
+    margin-right: 3rem;
+}
+
+nav ul{
+    display: contents;
+    height: 100vh;
+}
+
+nav li {
+    color: var(--white_sinodo);
+    padding: 1rem;
+    text-align: center;
+}
+
+#button_mobile{
+    display: none;
+    margin: auto;
+    cursor: pointer;
+    background-color: var(--white_sinodo);
+}
+
+@media (max-width: 730px) {
+    #top-bar{
+        background-color: transparent;
+        border-bottom: none;
+    }
+
+
+    #logo-diocese{
+        padding-top: 70px;
+        margin-left: calc(100vw/2 - 24px)
+    }
+
+    #button_mobile {
+        display: flex;
+        gap: .5rem;
+        position: fixed;
+        right: 1rem;
+
+
+        border: 2px solid var(--black_sinodo);
+        padding: 20px 18px;
+        margin-top: 1rem;
+        border-radius: 50%;
+        z-index: 1000;
+    }
+
+    #menu-itens {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        background-color: var(--green-contraste);
+        z-index: 900;
+        width: 100vw;
+        visibility: hidden;
+        height: 1px;
+        margin: auto;
+        margin-top: 0;
+
+        border-bottom: 5px solid var(--white_sinodo);
+        transition: 0.6s;
+        overflow-y: hidden;
+    }
+
+    #menu_principal.ativado #menu-itens {
+        height: 100vh;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu-itens li{
+        width: 80%;
+        margin: auto;
+        border-top: 2px solid rgba(27, 28, 27, .09);
+        display: flex;
+        justify-content: center;
+    }
+
+    #icon_menu{
+        color: var(--black_sinodo);
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+        transition: .2s;
+    }
+
+    #icon_menu::after, #icon_menu::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: var(--black_sinodo);
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #menu_principal.ativado #icon_menu{
+        color: transparent;
+        top: -7px;
+        transform: rotate(180deg);
+    }
+
+    #menu_principal.ativado #icon_menu::after{
+        transform: rotate(45deg);
+        top: -7px;
+    }
+    
+    #menu_principal.ativado #icon_menu::before{
+        transform: rotate(-45deg);
+    }
+}
+
+/* HERO STYLE */
+
+#hero {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.logo {
+    height: calc(100vh - 70px);
+    min-height: 550px;
+    margin-top: 70px;
+}
+
+#img-small{
+    display: none;
+}
+
+#bg_hero {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./trabalho/hero_banner_bg.png);
+    background-position-x: center;
+    background-position-y:bottom;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+@media (max-width: 800px)
+{
+    .logo {
+        height: calc(100vh - 70px);
+        min-height: 1px;
+        margin-top: 70px;
+        max-width: 100vw;
+        height: auto;
+    }
+
+    #img_big{
+        display: none;
+    }
+
+    #img-small{
+        display: block;
+    }
+
+    #bg_hero {
+        height: auto;
+        overflow: hidden;
+        background-image: none;
+    }   
+}
+
+/* O Sínodo */
+
+#sinodo {
+    background-color: var(--green-principal);
+    margin-top: -0px;
+}
+
+#frase_papa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -4px;
+    padding: 8rem 0rem;
+}
+
+
+#foto_papa img{
+    align-items: center;
+    max-width: 55vh;
+    width: 55vh;
+    max-height: 55vh;
+    height: 55vh;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 7px solid var(--white_sinodo);
+    margin: auto;
+    margin-right: 2rem;
+}
+
+#texto_destaque{
+    max-width: 30%;
+    color: var(--green-contraste);
+    font-weight: 500;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#frase_papa span{
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: right;
+    margin-top: 0;
+}
+
+#sobre_sinodo {
+    padding: 2rem 0rem;
+    max-width: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+}
+
+#sobre_sinodo img{
+    height: 40vh;
+    max-height: 100%;
+    border: 7px solid var(--white_sinodo);
+    margin-left: .2rem;
+}
+
+#sobre_sinodo h2{
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 90%;
+
+}
+
+#sobre_sinodo p{
+    font-weight: 500;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    max-width: 90%;
+    
+}
+
+#video_sinodo {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.colunas p {
+    text-align: center;
+}
+
+#organismos span{
+    font-weight: 500;
+}
+
+@media (max-width: 1100px)
+{
+    #frase_papa {
+        height: auto;
+        flex-direction: column;
+    }
+
+    #foto_papa img{
+        max-width: 30vh;
+        width: 30vh;
+        max-height: 30vh;
+        height: 30vh;
+        margin: auto;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    #texto_destaque{
+        max-width: 90%;
+        font-size: 2rem;
+        margin-bottom: 5rem;
+    }
+}
+
+@media (max-width: 900px)
+{
+    #frase_papa{
+        padding: 0;
+        padding-top: 2rem;
+    }
+    
+    #sobre_sinodo{
+        flex-direction: column-reverse;
+    }
+
+    #sobre_sinodo img {
+        margin: auto;
+        margin-bottom: 1rem;
+        height: auto;        
+    }
+
+    #sobre_sinodo p {
+        margin: auto;
+    }
+
+
+}
+
+/* timeline sínodo */
+
+#timeline{
+    display: flex;
+    max-width: 100vw;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.timeline_individual {
+    max-width: 16vw;
+}
+
+.timeline_fundo img{
+    height: 50vh;
+    
+    width: fit-content;
+    object-fit: cover;
+    object-position: center;
+}
+
+.timeline_fundoColor{
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+}
+
+/* A diocese e o sinodo */
+
+#diocese img{
+    align-items: center;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 7px solid var(--green-contraste);
+    margin: auto;
+    margin-right: 2rem;
+}
+
+#diocese svg{
+    width: 300vw;
+}
+
+.img_numeros{
+    width: 160px;
+    margin: 1rem 2rem .5rem 2rem !important;
+}
+
+#numeros {
+    display: flex;
+    margin: auto;
+    width: 70vw;
+    max-width: 1920px;
+    justify-content: center;
+
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#destaque_projetos{
+    margin-top: 3rem;
+}
+
+.destaque_content{
+    display: grid;
+    justify-content: center;
+}
+
+.img_destaque{
+    width: 192px;
+    margin: auto !important;
+    margin-bottom: 1rem !important;
+}
+
+@media (max-width: 900px)
+{
+    #diocese .colunas{
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+    }
+
+    #organismos .colunas div, 
+    #delegados .colunas div{
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    #diocese .colunas p{
+        width: 100%;
+    }
+
+    #diocese svg{
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 680px)
+{
+
+    #sobre_sinodo{
+        padding: 0;
+        padding-top: 2rem;
+    }
+
+    #video_sinodo{
+        height: auto;
+        padding: 3rem 0;
+    }
+
+    .img_numeros{
+        width: 100px;
+        margin: 1rem 2rem .5rem 0rem !important;
+    }
+
+    #numeros div {
+        display: flex;
+        align-items: center;
+    }
+
+    #numeros h3 {
+        margin: auto;
+    }
+    
+}
+
+/* Materiais */
+
+#materiais{
+    background-color: var(--green-contraste);
+    margin-top: -5px;
+}
+
+#materiais h2, #materiais h3, #materiais h4, #materiais p{
+    color: var(--white_sinodo);
+}
+
+#materiais p {
+    font-weight: 300;
+    text-align: center;
+}
+
+#lista_materiais{
+    max-width: 1920px;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.material {
+    margin: 2rem;
+    max-width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button {
+    color: var(--green-contraste);
+    border: none;
+    padding: 15px 32px;
+    margin-top: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+button:hover{
+    background-color: var(--green-hover);
+    box-shadow: 0px 4px 16px -4px var(--green-contraste);  
+}
+
+#hino h4, #hino p{
+    text-align: left;
+}
+
+#hino h4 {
+    font-size: 1.3rem;
+    margin-top: .3rem;
+    margin-bottom: .2rem;
+}
+
+#video_hino {
+    width: 70vw;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#dados_hino button{
+    width: 40%;
+    margin: .7rem;
+    transition: .5s;
+}
+
+@media (max-width: 600px)
+{
+    #lista_materiais{
+        flex-direction: column;
+    }
+
+    .material{
+        max-width: 90%;
+        margin: 1rem;
+    }
+
+    .hino_content{
+        flex-direction: column-reverse;
+    }
+
+    #hino h4 {
+        text-align: center;
+    }
+
+    #hino_button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #dados_hino button{
+        width: 60vw;
+    }
+}
+
+/*Notícias */
+
+#noticias {
+    display: grid;
+    justify-items: center;
+
+}
+
+#noticias button {
+    background-color: var(--green-contraste);
+    color: var(--white_sinodo);
+    transition: .5s;
+}
+
+
+/*Agenda*/
+
+#agenda{
+    background-color: var(--green-principal);
+    margin-top: -5px;
+}
+
+#lista_eventos {
+    max-width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.evento_individual{
+    width: 30%;
+    margin: 1rem;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid var(--green-contraste);
+
+    transition: .3s;
+}
+
+.header_evento{
+    background-color: var(--green-contraste);
+    border-radius: 23px 23px 0 0 ;
+}
+
+.header_evento h3{
+    color: var(--white_sinodo);
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.info_evento{
+    color: var(--white_sinodo);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.descricao_evento {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto !important;
+}
+
+@media (max-width: 900px) {
+    .evento_individual{
+        width: 50%;
+    }
+
+    #lista_eventos {
+        max-width: 100vw;
+}}
+@media (max-width: 700px) {
+    .evento_individual{
+        width: 80%;
+    }
+}
+
+
+
+/* FAQ */
+.pergunta{
+    margin: 0 1rem !important;
+}
+
+
+.pergunta_resposta {
+    background-color: var(--green-principal);
+    padding: .01rem;
+    margin: 0px !important;
+    border: 2px solid var(--green-contraste);
+    width: 30vw;
+
+    outline: none;
+    transition: 0.3s;
+
+    border-radius: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+
+#line_faq{
+    color: var(--black_sinodo);
+    display: block;
+    border-top: 2px solid;
+    width: 250px;
+    margin: auto;
+    transition: .2s;
+}
+
+.pergunta_resposta h3{
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 1rem;
+    cursor: pointer;
+
+}
+
+.resposta{
+    border-left: 4px solid var(--black_sinodo);
+    padding: 1rem;
+    background-color: rgba(27, 28, 27, .2);
+    display: none;
+    margin: 0 !important;
+}
+
+
+.pergunta_radio:checked + label .resposta{
+    display: block;
+}
+
+.pergunta_radio:checked + label #line_faq{
+    display: none;
+}
+
+#questions input{
+    display: none;
+    
+}
+
+
+
+.wp-block-contact-form-7-contact-form-selector {
+    background-color: var(--green-principal);
+    padding: .01rem;
+    margin: 0px !important;
+    border: 2px solid var(--green-contraste);
+    border-radius: 28px;
+}
+
+.wp-block-contact-form-7-contact-form-selector input{
+    border-radius: 15px;
+    padding: .5rem;
+    height: 1.5rem;
+    width: 30vw;
+    border: solid 3px var(--green-contraste);
+    border-radius: 15px;
+    
+    margin: .2rem;
+}
+.wp-block-contact-form-7-contact-form-selector textarea{
+    border-radius: 15px;
+    padding: .5rem;
+    width: 30vw;
+    border: solid 3px var(--green-contraste);
+    border-radius: 15px;
+    
+    margin: .2rem;
+}
+
+input[type=submit]{
+    color: var(--green-contraste);
+    border: none;
+    padding: 15px 32px;
+    margin-top: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    height: auto;
+    transition: .5s;
+}
+
+input[type=submit]:hover{
+    background-color: var(--green-hover);
+    box-shadow: 0px 4px 16px -4px var(--green-contraste);  
+}
+
+@media (max-width: 900px)
+{
+    #faq .colunas{
+        flex-direction: column;
+    }
+
+    .pergunta_resposta{
+        width: auto;
+    }
+
+    .wp-block-contact-form-7-contact-form-selector input,
+    .wp-block-contact-form-7-contact-form-selector textarea{
+        width: 50vw;
+    }
+
+}
+
+@media (max-width: 345px) {
+    #line_faq{
+        width: 100px;
+}
+}
+
+/*FOOTER */
+ #footer {
+     background-color: var(--green-contraste);
+ }
+
+ #footer h3, #footer p, #footer a {
+     color: var(--white_sinodo);
+ }
+
+ #footer .colunas{
+     justify-content: space-evenly;
+ }
+
+ #footer_link p,
+ #footer_link a{
+     padding: .5rem;
+ }
