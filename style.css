@@ -620,7 +620,7 @@ nav li {
     }
 
     #video_sinodo{
-        height: auto;
+        height: 40vh;
         padding: 3rem 0;
     }
 
@@ -716,19 +716,9 @@ button:hover{
     transition: .5s;
 }
 
-@media (max-width: 600px)
-{
-    #lista_materiais{
+@media (max-width: 900px) {
+    #hino_content{
         flex-direction: column;
-    }
-
-    .material{
-        max-width: 90%;
-        margin: 1rem;
-    }
-
-    .hino_content{
-        flex-direction: column-reverse;
     }
 
     #hino h4 {
@@ -743,6 +733,19 @@ button:hover{
 
     #dados_hino button{
         width: 60vw;
+    }
+}
+
+
+@media (max-width: 600px)
+{
+    #lista_materiais{
+        flex-direction: column;
+    }
+
+    .material{
+        max-width: 90%;
+        margin: 1rem;
     }
 }
 
