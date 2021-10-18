@@ -34,13 +34,7 @@ a {
     text-decoration: none;
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
-svg {
-    z-index: 1;
-}
 
 /* ROOT */
 
@@ -53,6 +47,20 @@ svg {
 }
 
 /* GENERAL STYLE */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 730px){
+html {
+    scroll-behavior: auto;
+}
+}
+
+svg {
+    z-index: 1;
+}
+
 body {
     background-color: var(--white_sinodo);
     font-family: 'Roboto', sans-serif;
