@@ -389,12 +389,22 @@ nav li {
     
 }
 
-#video_sinodo {
-    height: 80vh;
+
+
+
+#video_sinodo video{
+    max-width: 60vw;
+    width: 1080px;
+
+    border: 7px solid var(--white_sinodo);
+
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    transition: .3s;
 }
 
 .colunas p {
@@ -627,9 +637,8 @@ nav li {
         padding-top: 2rem;
     }
 
-    #video_sinodo{
-        height: 40vh;
-        padding: 3rem 0;
+    #video_sinodo video{
+        max-width: 90vw;
     }
 
     .img_numeros{
@@ -709,13 +718,17 @@ button:hover{
     margin-bottom: .2rem;
 }
 
-#video_hino {
-    width: 70vw;
-    height: 35vh;
+#video_hino{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
+    transition: .3s; 
+}
+
+#video_hino video{
+    width: 100%;
+    border: 7px solid var(--white_sinodo);  
 }
 
 #dados_hino button{
