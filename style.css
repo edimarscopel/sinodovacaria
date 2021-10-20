@@ -472,6 +472,7 @@ nav li {
     width: 90vw;
     margin-bottom: 6rem;
     color:var(--white_sinodo);
+    transition: .3s;
 }
 
 .timeline_individual{
@@ -708,11 +709,11 @@ button:hover{
     box-shadow: 0px 4px 16px -4px var(--green-contraste);  
 }
 
-#hino h4, #hino p{
+#hino h3, #hino p{
     text-align: left;
 }
 
-#hino h4 {
+#hino h3 {
     font-size: 1.3rem;
     margin-top: .3rem;
     margin-bottom: .2rem;
