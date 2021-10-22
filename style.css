@@ -1026,6 +1026,10 @@ input[type=submit]:hover{
      justify-content: space-evenly;
  }
 
+#footer .colunas div{
+    flex:1 1 0;
+}
+
  #footer_link p,
  #footer_link a{
      padding: .5rem;
