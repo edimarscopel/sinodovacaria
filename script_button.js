@@ -32,35 +32,39 @@ var listaEventos = {
 
   "eventos": [
     {
-      "titulo": "Abertura do Sínodo",
-      "data": "2021,10,14",
-      "hora": "0h05min",
-      "local": "Algum lugar",
-      "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate optio molestiae qui totam soluta, corporis architecto aliquid facere, tempora est, debitis doloremque perferendis sed. Quia quas voluptate explicabo tempora?",
+      "titulo": "45ª Assembleia Diocesana de Pastoral",
+      "data": "2021,11,6",
+      "data_exibe": "5 e 6 de novembro de 2021",
+      "hora": "",
+      "local": "Centro de Formação - Vacaria",
+      "descricao": "A Assembleia ocorre anualmente e tem por objetivo avaliar as atividades pastorais do ano corrente, bem como planejar o ano seguinte e refletir temas pertinentes para a ação eclesial.",
       "link": ""
     },
     {
-      "titulo": "Abertura do Sínodo",
-      "data": "2021,11,01",
-      "hora": "0h05min",
-      "local": "Algum lugar",
-      "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate optio molestiae qui totam soluta, corporis architecto aliquid facere, tempora est, debitis doloremque perferendis sed. Quia quas voluptate explicabo tempora?",
+      "titulo": "Abertura oficial do Sínodo",
+      "data": "2022,03,26",
+      "data_exibe": "26 de março de 2022",
+      "hora": "hora",
+      "local": "Vacaria",
+      "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolorem, explicabo neque nobis",
       "link": ""
     },
     {
-      "titulo": "Abertura do Sínodo na forania de São José do Ouro",
-      "data": "2023,01,01",
-      "hora": "0h05min",
-      "local": "Algum lugar",
-      "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate optio molestiae qui totam soluta, corporis architecto aliquid facere, tempora est, debitis doloremque perferendis sed. Quia quas voluptate explicabo tempora?",
-      "link": "dfsdsfsdgdfgsdfgdf"
+      "titulo": "Abertura oficial do Sínodo",
+      "data": "2022,03,27",
+      "data_exibe": "27 de março de 2022",
+      "hora": "hora",
+      "local": "Sananduva",
+      "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolorem, explicabo neque nobis",
+      "link": ""
     },
     {
-      "titulo": "Abertura do Sínodo",
-      "data": "2022,01,01",
-      "hora": "0h05min",
-      "local": "Algum lugar",
-      "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate optio molestiae qui totam soluta, corporis architecto aliquid facere, tempora est, debitis doloremque perferendis sed. Quia quas voluptate explicabo tempora?",
+      "titulo": "",
+      "data": "",
+      "data_exibe": "",
+      "hora": "",
+      "local": "",
+      "descricao": "",
       "link": ""
     },
   ]
@@ -110,7 +114,7 @@ for (var i = 0; i < evento.length && i < 6; i++) {
 
   //define valores
   titulo.textContent = evento[i].titulo;
-  data.textContent = dataFormatada;
+  data.textContent = evento[i].data_exibe;
   hora.textContent = evento[i].hora;
   local.textContent = evento[i].local;
   texto_descricao.textContent = evento[i].descricao;

@@ -390,8 +390,13 @@ nav li {
     
 }
 
+#etapas p{
+    margin-bottom: .5rem;
+}
 
-
+#etapas .colunas div{
+    flex:1 1 0;
+}
 
 #video_sinodo video{
     max-width: 60vw;
@@ -498,6 +503,11 @@ nav li {
     box-shadow: 0px 7px 25px 1px var(--black_sinodo);
 }
 
+.timeline_content{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around ;
+}
 
 .timeline_info{
     text-align: center;
