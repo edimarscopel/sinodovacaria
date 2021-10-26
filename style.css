@@ -539,7 +539,7 @@ nav li {
     display: none;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 980px) {
     #timeline{
         grid-template-columns: 1fr;
     }
@@ -593,6 +593,29 @@ nav li {
 
 #diocese svg{
     width: 300vw;
+}
+
+#diocese button{
+    background-color: var(--green-contraste);
+    color: var(--white_sinodo);
+}
+
+#texto_diocese{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#texto_diocese p{
+    margin-bottom: .5rem;
+}
+
+#texto_diocese a{
+    margin: auto;
+}
+
+#texto_diocese i{
+    font-style: italic;
 }
 
 .img_numeros{
@@ -682,7 +705,7 @@ nav li {
 
 #materiais{
     background-color: var(--green-contraste);
-    margin-top: -5px;
+    margin-top: -7px;
 }
 
 #materiais h2, #materiais h3, #materiais h4, #materiais p{
