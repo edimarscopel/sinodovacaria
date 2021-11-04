@@ -583,7 +583,7 @@ nav li {
     }
 
 /* A diocese e o sinodo */
-
+/*obsoleto
 #diocese img{
     align-items: center;
     object-fit: cover;
@@ -594,8 +594,19 @@ nav li {
     margin-right: 2rem;
 }
 
+
 #diocese svg{
     width: 300vw;
+}
+*/
+
+#ilustra_diocese{
+    width: 200vw;
+    align-items: center;
+    object-fit: cover;
+    object-position: center;
+    margin: auto;
+    margin-right: 2rem;
 }
 
 #diocese button{
@@ -671,6 +682,10 @@ nav li {
     }
 
     #diocese svg{
+        width: 80%;
+    }
+
+    #ilustra_diocese{
         width: 80%;
     }
 
