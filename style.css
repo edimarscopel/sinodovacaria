@@ -1059,3 +1059,9 @@ input[type=submit]:hover{
  .footer_link{
      padding: .5rem;
  }
+
+ #info_rodape p,
+ #info_rodape a{
+     font-size: .7rer;
+    color: var(--white_sinodo);
+ }

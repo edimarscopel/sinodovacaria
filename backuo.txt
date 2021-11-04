@@ -1,0 +1,24 @@
+<!-- OCULTA IDENTIDADE DO SITE DA DIOCESE -->
+<style>
+
+.page-id-5493 .site-header,
+.page-id-5493 .site-footer,
+.page-id-5493 .trail-title,
+.page-id-5493 .trail-items,
+.page-id-5493 #flash-breadcrumbs,
+.page-id-5493 #masthead-sticky-wrapper {
+display: none;
+}
+
+.page-id-5493 .tg-container{
+margin: 0;
+max-width: inherit
+}
+
+.page-id-5493 .entry-content {
+    margin-top: 0;
+    heidth: 100vh
+
+
+
+</style>
