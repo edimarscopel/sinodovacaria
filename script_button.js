@@ -41,24 +41,6 @@ var listaEventos = {
       "link": ""
     },
     {
-      "titulo": "Abertura oficial do Sínodo",
-      "data": "2022,03,26",
-      "data_exibe": "26 de março de 2022",
-      "hora": "hora",
-      "local": "Vacaria",
-      "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolorem, explicabo neque nobis",
-      "link": ""
-    },
-    {
-      "titulo": "Abertura oficial do Sínodo",
-      "data": "2022,03,27",
-      "data_exibe": "27 de março de 2022",
-      "hora": "hora",
-      "local": "Sananduva",
-      "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolorem, explicabo neque nobis",
-      "link": ""
-    },
-    {
       "titulo": "",
       "data": "",
       "data_exibe": "",

@@ -461,7 +461,10 @@ nav li {
     #sobre_sinodo img {
         margin: auto;
         margin-bottom: 1rem;
-        height: auto;        
+        height: auto;   
+        max-height: 80vh;
+        width: -webkit-fill-available;
+     
     }
 
     #sobre_sinodo p {
@@ -539,7 +542,7 @@ nav li {
     display: none;
 }
 
-@media (max-width: 80px) {
+@media (max-width: 800px) {
     #timeline{
         grid-template-columns: 1fr;
     }
