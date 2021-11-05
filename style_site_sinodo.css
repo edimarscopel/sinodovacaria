@@ -546,7 +546,7 @@ nav li {
     display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 970px) {
     #timeline{
         grid-template-columns: 1fr;
     }
